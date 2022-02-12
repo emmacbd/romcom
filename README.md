@@ -38,10 +38,11 @@ Cover** button and add your custom cover to your **Saved Covers** section.
 - HTML
 
 #### Instructions on Use
-- Click Show Random button for Random
-- click save to save
-- click make your own to make a custom book cover
-- home button to return to home
+- Click Show Random button for a randomly generated cover
+- Click Save Cover button to save your current cover
+- Click Make Your Own Cover to make a custom book cover
+- Click View Saved Covers to see any saved covers
+- Click Home button to return to main page
 
 #### Deploy Link
- [click here](https://emmacbd.github.io/romcom/)
+ [Click Here For Romantic Shenanigans](https://emmacbd.github.io/romcom/)
