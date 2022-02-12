@@ -36,6 +36,7 @@ Cover** button and add your custom cover to your **Saved Covers** section.
 #### Technologies Used
 - Javascript
 - HTML
+- CSS
 
 #### Instructions on Use
 - Click Show Random button for a randomly generated cover
