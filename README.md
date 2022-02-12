@@ -17,10 +17,17 @@ has got you covered!
 Have fun with our **Random Cover** button to see a variety of covers,
 titles, and taglines. See one you can't live without? Then smash that **Save Cover** button, friend, and send that baby to your **Saved Covers** section!
 
+<img width="1423" alt="Screen Shot 2022-02-12 at 3 26 41 PM" src="https://user-images.githubusercontent.com/93603551/153729927-972246e6-9285-4e1b-982a-74127a4321de.png">
+
+
 If none of the random covers strike your fancy, or you just feel like getting creative,
-try out the **Make Your Own Cover** feature! With this form you can add your own picture (or
-any fair use .jpg or .png image of your choice), devise a title, and throw in a couple spicy
-taglines. Once you've crafted your perfect cover, go ahead and click the **Make My Book**
+try out the **Make Your Own Cover** feature! With this form you can add your own picture, devise a title, and throw in a couple spicy
+taglines.
+
+<img width="1412" alt="Screen Shot 2022-02-12 at 3 29 02 PM" src="https://user-images.githubusercontent.com/93603551/153730012-73e91bbc-161a-4a1a-bc4d-6d65b5644581.png">
+
+
+Once you've crafted your perfect cover, go ahead and click the **Make My Book**
 button to reap the fruits of your romantic labor. While you're at it, you can click that **Save
 Cover** button and add your custom cover to your **Saved Covers** section.
 
