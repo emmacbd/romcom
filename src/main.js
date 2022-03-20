@@ -20,11 +20,11 @@ var customTagLine1 = document.querySelector("#descriptor1")
 var customTagLine2 = document.querySelector("#descriptor2")
 var grid = document.querySelector(".saved-covers-section")
 
-window.addEventListener("load", showNewRandomCover)
-saveButton.addEventListener("click", saveCover)
-randomCover.addEventListener("click", showNewRandomCover)
+window.addEventListener("load",getRandomCover);
+saveButton.addEventListener("click", saveCover);
+randomCover.addEventListener("click", getRandomCover);
 makeYourOwnButton.addEventListener("click", showForm)
-savedView.addEventListener("click", function() {
+savedView.addEventListener("click", ()  => {
   viewSaved();
   showGrid();
 });
@@ -62,6 +62,7 @@ function showGrid() {
    grid.innerHTML = htmlElem;
  }
 };
+
 function saveCover() {
   if (!savedCovers.includes(currentCover)) {
     savedCovers.push(currentCover)
@@ -85,42 +86,47 @@ function storeBook() {
   titles.push(customTitle.value);
   covers.push(customCover.value);
   descriptors.push(customTagLine1.value, customTagLine2.value);
+
+  showCover();
 };
 
 function viewSaved() {
-  homeView.classList.toggle("hidden")
-  savedSection.classList.toggle("hidden")
-  showRandomButton.classList.toggle("hidden")
-  saveButton.classList.toggle("hidden")
-  homeButton.classList.toggle("hidden")
+  homeView.classList.add("hidden")
+  savedSection.classList.remove("hidden")
+  showRandomButton.classList.add("hidden")
+  saveButton.classList.add("hidden")
+  homeButton.classList.remove("hidden")
+  formView.classList.add("hidden")
 };
 
 function viewHome() {
-  homeView.classList.toggle("hidden")
-  savedSection.classList.toggle("hidden")
-  showRandomButton.classList.toggle("hidden")
-  saveButton.classList.toggle("hidden")
-  homeButton.classList.toggle("hidden")
+  homeView.classList.remove("hidden")
+  savedSection.classList.add("hidden")
+  showRandomButton.classList.remove("hidden")
+  saveButton.classList.remove("hidden")
+  homeButton.classList.add("hidden")
 };
 
 function showForm() {
-  formView.classList.toggle("hidden")
-  homeView.classList.toggle("hidden")
-  showRandomButton.classList.toggle("hidden")
-  saveButton.classList.toggle("hidden")
-  homeButton.classList.toggle("hidden")
+  formView.classList.remove("hidden")
+  homeView.classList.add("hidden")
+  showRandomButton.classList.add("hidden")
+  saveButton.classList.add("hidden")
+  homeButton.classList.remove("hidden")
+  savedSection.classList.add("hidden")
 };
 
-function showNewRandomCover() {
-  coverTitle.innerText = titles[getRandomIndex(titles)]
-  coverImage.src = covers[getRandomIndex(covers)]
-  tagLine1.innerText = descriptors[getRandomIndex(descriptors)]
-  tagLine2.innerText = descriptors[getRandomIndex(descriptors)]
-newRandomCover();
+function showCover() {
+   coverTitle.innerText = currentCover.title;
+   coverImage.src = currentCover.cover;
+   tagLine1.innerText = currentCover.tagline1;
+   tagLine2.innerText = currentCover.tagline2;
 };
 
- function newRandomCover() {
-   currentCover = new Cover(coverImage.src, coverTitle.innerText, tagLine1.innerText, tagLine2.innerText)
+function getRandomCover() {
+  currentCover = new Cover(covers[getRandomIndex(covers)], titles[getRandomIndex(titles)], descriptors[getRandomIndex(descriptors)], descriptors[getRandomIndex(descriptors)])
+
+  showCover();
 };
 
 function getRandomIndex(array) {
